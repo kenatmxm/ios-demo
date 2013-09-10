@@ -66,7 +66,10 @@
 //Server response after submitting data
 -(void)serverResponse:(NSData *)response andError:(NSError *)error
 {
-    //Manage the CardFlight API server response
+    //Manage the CardFlight API server response   
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
+    
+    NSLog(@"Server Response: %@", jsonDict);
 }
 
 #pragma mark - CardFlight commands
@@ -93,16 +96,12 @@
     if (priceTextField.text.floatValue)
     {
         //Process payment
-        //[[CardFlight sharedInstance] processPaymentWithDefaultDialog:YES andAmount:priceTextField.text.floatValue];
-        NSMutableDictionary *transaction = [NSMutableDictionary dictionary];
-        NSString *description = descriptionTextField.text;
-        NSString *currency = currencyTextField.text;
-        NSNumber *amount = [NSNumber numberWithFloat:2.3];
+        NSMutableDictionary *transaction = [NSMutableDictionary dictionary];       
+        [transaction setObject:descriptionTextField.text forKey:@"description"];
+        [transaction setObject:[NSNumber numberWithFloat:priceTextField.text.floatValue] forKey:@"amount"];
+        [transaction setObject:currencyTextField.text forKey:@"currency"];
         
-        [transaction setObject:description forKey:@"description"];
-        [transaction setObject:amount forKey:@"amount"];
-        [transaction setObject:currency forKey:@"currency"];
-        [[CardFlight sharedInstance] processPaymentWithTransaction:transaction];    
+        [[CardFlight sharedInstance] processPaymentWithTransaction:transaction];
     }
     else
     {
@@ -128,7 +127,7 @@
     scrollView.contentSize = self.view.frame.size;
     
     //Initialize CardFlight, set it's delegate and API and Account tokens
-    [[CardFlight sharedInstance] setApiToken:@"e9cb15860f08e738b792951891d4ba4f" accountToken:@"08ff8bf670afe268" andDelegate:self];
+    [[CardFlight sharedInstance] setApiToken:@"4fb831302debeb03128c5c23633a5b42" accountToken:@"c10aa9a847b55d87" andDelegate:self];
     
     priceTextField.delegate = self;
 }
