@@ -16,6 +16,8 @@
 @implementation ViewController
 
 @synthesize priceTextField;
+@synthesize currencyTextField;
+@synthesize descriptionTextField;
 @synthesize nameTextField;
 @synthesize numberTextField;
 @synthesize expDateTextField;
@@ -91,7 +93,16 @@
     if (priceTextField.text.floatValue)
     {
         //Process payment
-        [[CardFlight sharedInstance] processPaymentWithDefaultDialog:YES andAmount:priceTextField.text.floatValue];
+        //[[CardFlight sharedInstance] processPaymentWithDefaultDialog:YES andAmount:priceTextField.text.floatValue];
+        NSMutableDictionary *transaction = [NSMutableDictionary dictionary];
+        NSString *description = descriptionTextField.text;
+        NSString *currency = currencyTextField.text;
+        NSNumber *amount = [NSNumber numberWithFloat:2.3];
+        
+        [transaction setObject:description forKey:@"description"];
+        [transaction setObject:amount forKey:@"amount"];
+        [transaction setObject:currency forKey:@"currency"];
+        [[CardFlight sharedInstance] processPaymentWithTransaction:transaction];    
     }
     else
     {
@@ -137,6 +148,8 @@
     [self setNumberTextField:nil];
     [self setExpDateTextField:nil];
     [self setScrollView:nil];
+    [self setCurrencyTextField:nil];
+    [self setDescriptionTextField:nil];
     [super viewDidUnload];
 }
 

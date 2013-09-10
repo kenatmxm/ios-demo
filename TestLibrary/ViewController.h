@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *expDateTextField;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITextField *currencyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 
 
 @end

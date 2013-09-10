@@ -26,6 +26,8 @@
 //Validate data and start processing payment
 -(void)processPaymentWithDefaultDialog:(BOOL)dialog andAmount:(float)amount;
 
+-(void)processPaymentWithTransaction:(NSDictionary *)transaction;
+
 //Set backgound color and navigation bar tint color in keyed entry view
 -(void)setCardFlightViewControllerBackgroundColor:(id)backgroundColor andNavigationBarTintColor:(id)tintColor;
 
