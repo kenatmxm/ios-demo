@@ -89,6 +89,9 @@
 		3623665B17EA298C00749E8E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				543B5B24170ADDB800D01132 /* Default.png */,
+				543B5B26170ADDB800D01132 /* Default@2x.png */,
+				543B5B28170ADDB800D01132 /* Default-568h@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -189,9 +192,6 @@
 				543B5B1B170ADDB800D01132 /* InfoPlist.strings */,
 				543B5B1E170ADDB800D01132 /* main.m */,
 				543B5B20170ADDB800D01132 /* CardFlightIOSDemo-Prefix.pch */,
-				543B5B24170ADDB800D01132 /* Default.png */,
-				543B5B26170ADDB800D01132 /* Default@2x.png */,
-				543B5B28170ADDB800D01132 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
