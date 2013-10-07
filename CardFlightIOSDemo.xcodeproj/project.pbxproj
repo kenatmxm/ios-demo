@@ -234,6 +234,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					543B5B0E170ADDB800D01132 = {
+						DevelopmentTeam = XEA46H8WDD;
+					};
+				};
 			};
 			buildConfigurationList = 543B5B0A170ADDB800D01132 /* Build configuration list for PBXProject "CardFlightIOSDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -364,8 +369,8 @@
 		543B5B33170ADDB800D01132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tim Saunders (N2LCJY84AC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tim Saunders (N2LCJY84AC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardFlightIOSDemo/CardFlightIOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "CardFlightIOSDemo/CardFlightIOSDemo-Info.plist";
@@ -377,8 +382,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CardFlightIOSDemo;
-				PROVISIONING_PROFILE = "DCFC9C09-960B-467C-BB0A-392A9C574B11";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DCFC9C09-960B-467C-BB0A-392A9C574B11";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
@@ -388,8 +393,8 @@
 		543B5B34170ADDB800D01132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tim Saunders (N2LCJY84AC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tim Saunders (N2LCJY84AC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardFlightIOSDemo/CardFlightIOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "CardFlightIOSDemo/CardFlightIOSDemo-Info.plist";
@@ -401,8 +406,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CardFlightIOSDemo;
-				PROVISIONING_PROFILE = "DCFC9C09-960B-467C-BB0A-392A9C574B11";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DCFC9C09-960B-467C-BB0A-392A9C574B11";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
