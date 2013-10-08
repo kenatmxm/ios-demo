@@ -14,6 +14,7 @@
 - (IBAction)swipeCard:(id)sender;
 - (IBAction)manualEntry:(id)sender;
 - (IBAction)sendSwipeData:(id)sender;
+- (IBAction)getSerial:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *numberTextField;

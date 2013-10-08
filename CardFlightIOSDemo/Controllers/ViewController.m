@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 
+
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
@@ -109,6 +111,12 @@
         [errorAlert show];
     }
    
+}
+
+- (IBAction)getSerial:(id)sender {
+    NSString *serialNumber = [[CardFlight sharedInstance] getReaderSerialNumber];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:serialNumber message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - View Lifecycle

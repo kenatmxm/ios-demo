@@ -14,6 +14,12 @@
 
 +(CardFlight *)sharedInstance;
 
+// Returns the currect API Token
+-(NSString *) getApiToken;
+
+// Returns the currect Account Token
+-(NSString *) getAccountToken;
+
 // Initializes CardFlight API with API Token, Account Token and sets the delegate
 -(void)setApiToken:(NSString *)cardFlightApiToken accountToken:(NSString *)cardFlightAccountToken andDelegate:(id<CardFlightDelegate>)delegate;
 
@@ -23,17 +29,19 @@
 // Present CardFlight keyed entry view
 -(void)startKeyedEntry;
 
-/*
- * DEPRECATED: Use processPaymentWithTransaction instead
- * Validate data and start processing payment
- */
--(void)processPaymentWithDefaultDialog:(BOOL)dialog andAmount:(float)amount;
-
-/*
+/**
  * Process a payment using a dictionary as parameters
  * @param transaction A dictionary containing amount, description, currency
  */
- -(void)processPaymentWithTransaction:(NSDictionary *)transaction;
+-(void)processPaymentWithTransaction:(NSDictionary *)transaction;
+-(NSString *)getReaderSerialNumber;
+
+
+/**
+ * Process a refund using a dictionary as parameters
+ * @param transaction A dictionary containing token and amount, 
+ */
+-(void)processRefundWithTransaction:(NSDictionary *)transaction;
 
 // Set backgound color and navigation bar tint color in keyed entry view
 -(void)setCardFlightViewControllerBackgroundColor:(id)backgroundColor andNavigationBarTintColor:(id)tintColor;
