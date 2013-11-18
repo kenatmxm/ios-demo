@@ -1,10 +1,14 @@
-//
-//  Charge.h
-//  CardFlightLibrary
-//
-//  Created by Tim Saunders on 9/20/13.
-//  Copyright (c) 2013 CardFlight Inc. All rights reserved.
-//
+/*
+ *****************************************************************
+ * CFTCharge.h
+ *
+ * Is returned after a successful charge is made.
+ * Contains all the information about a charge and has the ability
+ * to refund it, either partially or in full
+ *
+ * Copyright (c) 2013 CardFlight Inc. All rights reserved.
+ *****************************************************************
+ */
 
 #import <Foundation/Foundation.h>
 #import "CardFlight.h"

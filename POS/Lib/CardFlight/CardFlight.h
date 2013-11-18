@@ -1,29 +1,41 @@
-//
-//  CardFlight.h
-//  CardFlight
-//
-//  Copyright (c) 2013 CardFlight. All rights reserved.
-//
-
+/*
+ *****************************************************************
+ * CardFlight.h
+ *
+ * A CardFlight singleton is created to maintain session-wide
+ * settings and information.
+ *
+ * All additional functionality is supplied by the individual class
+ * related to the function that you want to perform. Only the
+ * classes required need to be included in a file.
+ *
+ * Copyright (c) 2013 CardFlight Inc. All rights reserved.
+ *****************************************************************
+ */
 #import <Foundation/Foundation.h>
 
 @interface CardFlight : NSObject
 
+/**
+ * Accessor for the CardFlight singleton
+ */
 + (CardFlight *)sharedInstance;
 
-// Returns the currect API Token
+/**
+ * Convenience method to return the current API token
+ */
 - (NSString *)getApiToken;
 
-// Returns the currect Account Token
+/**
+ * Convenience method to return the current Account token
+ */
 - (NSString *)getAccountToken;
 
-// Initializes CardFlight API with API Token, Account Token and sets the delegate
+/**
+ * Sets the API account token for the entire session. This only
+ * needs to be called once, most like in applicationDidFinishLaunching
+ */
 - (void)setApiToken:(NSString *)cardFlightApiToken
        accountToken:(NSString *)cardFlightAccountToken;
-
-- (NSString *)getReaderSerialNumber;
-
-// Stop CardFlight and release all it's resources
-- (void)stop;
 
 @end

@@ -539,11 +539,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POS/POS-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Lib/CardFlight",
-					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
-				);
+				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -558,11 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POS/POS-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Lib/CardFlight",
-					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
-				);
+				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,10 +577,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "POSTests/POSTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
-				);
+				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -608,10 +597,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POSTests/POSTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
-				);
+				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
