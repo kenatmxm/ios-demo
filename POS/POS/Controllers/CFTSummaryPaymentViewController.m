@@ -13,6 +13,7 @@
 #import "CFTCustomView.h"
 #import "CFTCustomEntryTextField.h"
 #import "CFTCard.h"
+#import "SVProgressHUD.h"
 
 @interface CFTSummaryPaymentViewController ()
 
@@ -49,14 +50,15 @@
 
 - (void)viewDidLoad {
     
-    [super viewDidLoad];    
+    [super viewDidLoad];
     [self setTitle:[_transaction amountAsString]];
-    _customView = [[CFTCustomView alloc] initWithoutCVVField];
+    
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:singleTap];
     
     _reader = [[CFTReader alloc] initAndConnect];
+    // [SVProgressHUD showWithStatus:@"Connecting Reader" maskType:SVProgressHUDMaskTypeClear];
     [_reader setDelegate:self];
 }
 
@@ -69,7 +71,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
+    _customView = [[CFTCustomView alloc] initWithoutCVVField];
     [_customView setFrame:self.view.frame];
     [self.view addSubview:_customView];
     
@@ -84,6 +86,12 @@
     [_customView.expirationDate customFieldFont:[UIFont systemFontOfSize:14]];
     [_customView.expirationDate customFieldKeyboardAppearance:UIKeyboardAppearanceDark];
     [_customView.expirationDate customFieldBorderStyle:UITextBorderStyleRoundedRect];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    // [_reader disconnect];
 }
 
 #pragma mark - Reader Delegate
@@ -102,6 +110,26 @@
         [_nameTextField setText:card.name];
         [_customView.cardNumber customFieldText:card.encryptedCardNumber];
         [_customView.expirationDate customFieldText:[NSString stringWithFormat:@"%i/%i", card.expirationMonth, card.expirationYear]];
+    }
+}
+
+- (void)readerIsConnecting {
+    
+    [SVProgressHUD showWithStatus:@"Connecting Reader" maskType:SVProgressHUDMaskTypeClear];
+}
+
+- (void)readerIsConnected:(BOOL)isConnected withError:(NSError *)error {
+    
+    [SVProgressHUD dismiss];
+    if (isConnected) {
+        [_reader beginSwipeWithMessage:@"Swipe card now"];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"CardFlight"
+                                                        message:error.localizedDescription
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
