@@ -94,9 +94,26 @@
 
 - (void)acceptSignature {
     
-    NSDictionary *parameters = @{@"amount": _transaction.amountInCents,
+    NSDictionary *parameters = @{@"amount": _transaction.amount,
                                  @"description": _transaction.descriptionText,
                                  @"currency": @"USD"};
+    
+//    [_card tokenizeCardWithSuccess:^{
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yup"
+//                                                        message:@"Tokenized, bitches"
+//                                                       delegate:self
+//                                              cancelButtonTitle:@"Okay"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//    }
+//                           failure:^(NSError *error){
+//                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                                               message:error.localizedDescription
+//                                                                              delegate:self
+//                                                                     cancelButtonTitle:@"Okay"
+//                                                                     otherButtonTitles:nil];
+//                               [alert show];
+//                           }];
     
     [_card chargeCardWithParameters:parameters
                             success:^(CFTCharge *charge) {

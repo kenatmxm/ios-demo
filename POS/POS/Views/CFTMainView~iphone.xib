@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CFTMainViewController">
@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-it-HNd">
-                    <rect key="frame" x="20" y="80" width="280" height="40"/>
+                    <rect key="frame" x="20" y="20" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="jFw-Qg-7Km"/>
@@ -27,7 +27,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Optional Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-w5-VRl">
-                    <rect key="frame" x="20" y="128" width="280" height="40"/>
+                    <rect key="frame" x="20" y="68" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="tb1-fo-Z3P"/>
@@ -36,7 +36,7 @@
                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukL-Fo-ig5">
-                    <rect key="frame" x="20" y="176" width="280" height="40"/>
+                    <rect key="frame" x="20" y="116" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="CbF-VI-xWa"/>
@@ -50,9 +50,13 @@
                         <action selector="swipeCardPressed:" destination="-1" eventType="touchUpInside" id="Slq-pC-QFM"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-Qs-6bf">
-                    <rect key="frame" x="25" y="88" width="12" height="24"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-Qs-6bf">
+                    <rect key="frame" x="25" y="28" width="12" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="0Hw-nr-FTS"/>
+                        <constraint firstAttribute="width" constant="12" id="P7n-ji-KyJ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -62,12 +66,14 @@
             <constraints>
                 <constraint firstItem="7k0-w5-VRl" firstAttribute="top" secondItem="X4C-it-HNd" secondAttribute="bottom" constant="8" id="BPu-0A-a6w"/>
                 <constraint firstAttribute="trailing" secondItem="ukL-Fo-ig5" secondAttribute="trailing" constant="20" id="F0E-HS-G1h"/>
+                <constraint firstItem="X4C-it-HNd" firstAttribute="centerY" secondItem="MqX-Qs-6bf" secondAttribute="centerY" id="Ltd-uD-tkh"/>
                 <constraint firstItem="ukL-Fo-ig5" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="QSk-7W-C3x"/>
                 <constraint firstItem="X4C-it-HNd" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="UXY-bW-jPY"/>
                 <constraint firstItem="ukL-Fo-ig5" firstAttribute="top" secondItem="7k0-w5-VRl" secondAttribute="bottom" constant="8" id="UsZ-CH-5Sy"/>
                 <constraint firstItem="X4C-it-HNd" firstAttribute="width" secondItem="7k0-w5-VRl" secondAttribute="width" id="e2B-5R-Tul"/>
-                <constraint firstItem="X4C-it-HNd" firstAttribute="top" secondItem="1" secondAttribute="top" constant="80" id="fcn-Ho-5z7"/>
+                <constraint firstItem="X4C-it-HNd" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="fcn-Ho-5z7"/>
                 <constraint firstItem="X4C-it-HNd" firstAttribute="centerX" secondItem="7k0-w5-VRl" secondAttribute="centerX" id="lEH-wA-8e8"/>
+                <constraint firstItem="MqX-Qs-6bf" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="25" id="pb5-Zv-rgC"/>
                 <constraint firstAttribute="trailing" secondItem="X4C-it-HNd" secondAttribute="trailing" constant="20" id="qbo-aG-EcV"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

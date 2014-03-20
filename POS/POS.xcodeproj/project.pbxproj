@@ -27,7 +27,7 @@
 		43167362182ED3AD00E41118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43167361182ED3AD00E41118 /* Images.xcassets */; };
 		43167365182ED51300E41118 /* CFTSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43167364182ED51300E41118 /* CFTSignatureViewController.m */; };
 		431ED0F0182EE46200EC22E5 /* UIImage+JTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 431ED0EF182EE46200EC22E5 /* UIImage+JTColor.m */; };
-		43AFA30F18345F280036221A /* libCardFlightLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AFA30E18345F280036221A /* libCardFlightLibrary.a */; };
+		434646A018591ADA001F9193 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4346469F18591ADA001F9193 /* ExternalAccessory.framework */; };
 		43B25ACE1831430B0091F350 /* NICSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B25ACD1831430B0091F350 /* NICSignatureView.m */; };
 		43B25AD0183144CB0091F350 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B25ACF183144CB0091F350 /* GLKit.framework */; };
 		43C60F00182E9FEA0029C34C /* CFTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C60EFF182E9FEA0029C34C /* CFTMainViewController.m */; };
@@ -77,14 +77,7 @@
 		43167364182ED51300E41118 /* CFTSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTSignatureViewController.m; sourceTree = "<group>"; };
 		431ED0EE182EE46200EC22E5 /* UIImage+JTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTColor.h"; sourceTree = "<group>"; };
 		431ED0EF182EE46200EC22E5 /* UIImage+JTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTColor.m"; sourceTree = "<group>"; };
-		4359ECCF183AB08400A5BA57 /* CFTAPIResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTAPIResource.h; sourceTree = "<group>"; };
-		43A653EF1834038C00E2E3C9 /* CardFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardFlight.h; sourceTree = "<group>"; };
-		43A653F01834038C00E2E3C9 /* CFTAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTAccount.h; sourceTree = "<group>"; };
-		43A653F11834038C00E2E3C9 /* CFTCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTCard.h; sourceTree = "<group>"; };
-		43A653F21834038C00E2E3C9 /* CFTCharge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTCharge.h; sourceTree = "<group>"; };
-		43A653F41834038C00E2E3C9 /* CFTReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTReader.h; sourceTree = "<group>"; };
-		43A653F7183415BC00E2E3C9 /* CFTCustomEntryTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTCustomEntryTextField.h; sourceTree = "<group>"; };
-		43AFA30E18345F280036221A /* libCardFlightLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardFlightLibrary.a; sourceTree = "<group>"; };
+		4346469F18591ADA001F9193 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		43B25ACC1831430B0091F350 /* NICSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICSignatureView.h; sourceTree = "<group>"; };
 		43B25ACD1831430B0091F350 /* NICSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICSignatureView.m; sourceTree = "<group>"; };
 		43B25ACF183144CB0091F350 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -93,7 +86,6 @@
 		43C60F01182EA02C0029C34C /* CFTMainView~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CFTMainView~iphone.xib"; sourceTree = "<group>"; };
 		43C60F04182EA8880029C34C /* CFTTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTTransaction.h; sourceTree = "<group>"; };
 		43C60F05182EA8880029C34C /* CFTTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTTransaction.m; sourceTree = "<group>"; };
-		43EFB0C6183433EE0091290F /* CFTCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTCustomView.h; sourceTree = "<group>"; };
 		D6BAB457182ED0330036F6EC /* CFTConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTConfirmationViewController.h; sourceTree = "<group>"; };
 		D6BAB458182ED0330036F6EC /* CFTConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTConfirmationViewController.m; sourceTree = "<group>"; };
 		D6BAB45A182ED0EB0036F6EC /* CFTConfirmationView~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CFTConfirmationView~iphone.xib"; sourceTree = "<group>"; };
@@ -105,8 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434646A018591ADA001F9193 /* ExternalAccessory.framework in Frameworks */,
 				43B25AD0183144CB0091F350 /* GLKit.framework in Frameworks */,
-				43AFA30F18345F280036221A /* libCardFlightLibrary.a in Frameworks */,
 				36D3C8E3182EB07D004CF456 /* MessageUI.framework in Frameworks */,
 				36D3C8E1182EB073004CF456 /* MediaPlayer.framework in Frameworks */,
 				36D3C8DF182EB06A004CF456 /* AudioToolbox.framework in Frameworks */,
@@ -159,7 +151,6 @@
 		4313A75C182D9396003510B8 = {
 			isa = PBXGroup;
 			children = (
-				43A653ED1834032E00E2E3C9 /* Lib */,
 				4313A76E182D9396003510B8 /* POS */,
 				4313A787182D9396003510B8 /* POSTests */,
 				4313A767182D9396003510B8 /* Frameworks */,
@@ -180,6 +171,7 @@
 		4313A767182D9396003510B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4346469F18591ADA001F9193 /* ExternalAccessory.framework */,
 				43B25ACF183144CB0091F350 /* GLKit.framework */,
 				36D3C8E2182EB07D004CF456 /* MessageUI.framework */,
 				36D3C8E0182EB073004CF456 /* MediaPlayer.framework */,
@@ -241,30 +233,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		43A653ED1834032E00E2E3C9 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				43A653EE1834033F00E2E3C9 /* CardFlight */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		43A653EE1834033F00E2E3C9 /* CardFlight */ = {
-			isa = PBXGroup;
-			children = (
-				4359ECCF183AB08400A5BA57 /* CFTAPIResource.h */,
-				43A653EF1834038C00E2E3C9 /* CardFlight.h */,
-				43A653F01834038C00E2E3C9 /* CFTAccount.h */,
-				43A653F11834038C00E2E3C9 /* CFTCard.h */,
-				43A653F21834038C00E2E3C9 /* CFTCharge.h */,
-				43EFB0C6183433EE0091290F /* CFTCustomView.h */,
-				43A653F7183415BC00E2E3C9 /* CFTCustomEntryTextField.h */,
-				43A653F41834038C00E2E3C9 /* CFTReader.h */,
-				43AFA30E18345F280036221A /* libCardFlightLibrary.a */,
-			);
-			path = CardFlight;
-			sourceTree = "<group>";
-		};
 		43C60F03182EA80A0029C34C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,9 +289,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CFT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = CardFlight;
 				TargetAttributes = {
+					4313A764182D9396003510B8 = {
+						DevelopmentTeam = 6GCU4S94SA;
+					};
 					4313A77F182D9396003510B8 = {
 						TestTargetID = 4313A764182D9396003510B8;
 					};
@@ -462,7 +433,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -494,6 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -501,7 +472,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -527,6 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -536,11 +507,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POS/POS-Info.plist";
-				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Lib/CardFlight",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/POS/Lib/CardFlight",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,11 +530,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POS/POS-Info.plist";
-				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Lib/CardFlight",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/POS/Lib/CardFlight",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -563,7 +550,6 @@
 		4313A795182D9396003510B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POS.app/POS";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -577,7 +563,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "POSTests/POSTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -587,7 +576,6 @@
 		4313A796182D9396003510B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POS.app/POS";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -597,7 +585,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POS/POS-Prefix.pch";
 				INFOPLIST_FILE = "POSTests/POSTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = Lib/CardFlight;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/paultower/CardFlight/cardflight-ios-pos/POS/Lib/CardFlight",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

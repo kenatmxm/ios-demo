@@ -18,8 +18,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [[CardFlight sharedInstance] setLogging:NO];
+    
     //Initialize CardFlight, set it's delegate and API and Account tokens
-    [[CardFlight sharedInstance] setApiToken:@"8061d4b3eb74eeb80ea0f25a43bc9fb8" accountToken:@"acc_031933bf285b8581"];
+    [[CardFlight sharedInstance] setApiToken:@"be0ac435062a09ed4851f451149b6701" accountToken:@"acc_d3fdff4d44c7c89c"];
     
     // Appearance
     CGFloat red = 29/255.f;

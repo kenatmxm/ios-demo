@@ -43,6 +43,7 @@
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(dismissKeyboard)];
+    [singleTap setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:singleTap];
 }
 

@@ -15,7 +15,7 @@
 #import "CFTCard.h"
 #import "SVProgressHUD.h"
 
-@interface CFTSummaryPaymentViewController ()
+@interface CFTSummaryPaymentViewController () <customEntryDelegate>
 
 @property (nonatomic) CFTTransaction *transaction;
 @property (nonatomic) CFTCustomView *customView;
@@ -50,9 +50,9 @@
 
 - (void)viewDidLoad {
     
-    [super viewDidLoad];
+    [super viewDidLoad];    
     [self setTitle:[_transaction amountAsString]];
-    
+   
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:singleTap];
@@ -71,21 +71,25 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    _customView = [[CFTCustomView alloc] initWithoutCVVField];
+     _customView = [[CFTCustomView alloc] initWithoutCVVField];
+    [_customView setDelegate:self];
     [_customView setFrame:self.view.frame];
     [self.view addSubview:_customView];
     
-    [_customView.cardNumber customFieldFrame:CGRectMake(20, 176, 280, 40)];
+    [_customView.cardNumber customFieldFrame:CGRectMake(20, 52, 280, 40)];
     [_customView.cardNumber customFieldPlaceholder:@"Card Number"];
     [_customView.cardNumber customFieldFont:[UIFont systemFontOfSize:14]];
     [_customView.cardNumber customFieldKeyboardAppearance:UIKeyboardAppearanceDark];
     [_customView.cardNumber customFieldBorderStyle:UITextBorderStyleRoundedRect];
+    [_customView.cardNumber customFieldReturnKeyType:UIReturnKeyNext];
+    [_customView.cardNumber customFieldTag:1];
     
-    [_customView.expirationDate customFieldFrame:CGRectMake(20, 224, 280, 40)];
+    [_customView.expirationDate customFieldFrame:CGRectMake(20, 100, 280, 40)];
     [_customView.expirationDate customFieldPlaceholder:@"Expiration Date"];
     [_customView.expirationDate customFieldFont:[UIFont systemFontOfSize:14]];
     [_customView.expirationDate customFieldKeyboardAppearance:UIKeyboardAppearanceDark];
     [_customView.expirationDate customFieldBorderStyle:UITextBorderStyleRoundedRect];
+    [_customView.expirationDate customFieldTag:2];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -96,7 +100,17 @@
 
 #pragma mark - Reader Delegate
 
-- (void)readerResponse:(CFTCard *)card withError:(NSError *)error {
+
+- (void)readerGenericResponse:(NSString *)cardData {
+    
+    NSLog(@"generic card");
+}
+
+- (void)readerSwipeDidCancel {
+
+}
+
+- (void)readerCardResponse:(CFTCard *)card withError:(NSError *)error {
     
     if (error) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"CardFlight"
@@ -107,6 +121,13 @@
         [alert show];
     } else {
         _card = card;
+//        NSLog(@"IN RESPONSE %@", _card.name);
+//        [_card tokenizeCardWithSuccess:^{
+//            NSLog(@"Card Token:  %@\n", _card.cardToken);
+//        }
+//                               failure:^(NSError *error){
+//                                   NSLog(@"ERROR %@", error.localizedDescription);
+//                               }];
         [_nameTextField setText:card.name];
         [_customView.cardNumber customFieldText:card.encryptedCardNumber];
         [_customView.expirationDate customFieldText:[NSString stringWithFormat:@"%i/%i", card.expirationMonth, card.expirationYear]];
@@ -123,6 +144,7 @@
     [SVProgressHUD dismiss];
     if (isConnected) {
         [_reader beginSwipeWithMessage:@"Swipe card now"];
+        // [_reader swipeTimeoutDuration:40];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"CardFlight"
                                                         message:error.localizedDescription
@@ -163,6 +185,12 @@
     [_nameTextField resignFirstResponder];
     [_customView.cardNumber customFieldResignFirstResponder];
     [_customView.expirationDate customFieldResignFirstResponder];
+}
+
+- (BOOL)customTextFieldShouldReturn:(NSInteger)textFieldTag {
+    
+    [self dismissKeyboard];
+    return YES;
 }
 
 @end

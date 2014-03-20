@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CFTSummaryPaymentViewController">
@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qly-j8-h3U">
-                    <rect key="frame" x="20" y="128" width="280" height="40"/>
+                    <rect key="frame" x="20" y="68" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="2xa-gO-aHF"/>
@@ -25,7 +25,7 @@
                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZM-ef-2uJ">
-                    <rect key="frame" x="20" y="80" width="280" height="40"/>
+                    <rect key="frame" x="20" y="20" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="sua-5b-APr"/>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjv-wL-Q9s">
-                    <rect key="frame" x="20" y="272" width="280" height="40"/>
+                    <rect key="frame" x="20" y="212" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="MWO-95-wTR"/>
@@ -57,7 +57,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Fjv-wL-Q9s" secondAttribute="trailing" constant="20" id="3wx-m0-R0n"/>
-                <constraint firstItem="6ZM-ef-2uJ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="80" id="9YW-kW-pfu"/>
+                <constraint firstItem="6ZM-ef-2uJ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="9YW-kW-pfu"/>
                 <constraint firstAttribute="trailing" secondItem="Qly-j8-h3U" secondAttribute="trailing" constant="20" id="Thf-1h-gBm"/>
                 <constraint firstItem="Qly-j8-h3U" firstAttribute="top" secondItem="6ZM-ef-2uJ" secondAttribute="bottom" constant="8" id="UJR-rm-OOT"/>
                 <constraint firstAttribute="trailing" secondItem="6ZM-ef-2uJ" secondAttribute="trailing" constant="20" id="Z34-0a-JwY"/>
